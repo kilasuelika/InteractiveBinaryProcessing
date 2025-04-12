@@ -15,7 +15,10 @@ When doing research, I frequently needed to dump some intermediate data for late
 ## usage
 ### Install or Build
 
-Just download the Release folder, click the `ibp.exe` then a prompt will shows. Type following commands for running.
+Download release and extract, click the `ibp.exe` then a prompt will shows. Type commands for running. If you want to build by your self, the compilier should support C++23 and modules. On windows install following vcpkg packages:
+```
+./vcpkg install cli CLI11 boost exprtk fmt
+```
 
 
 ### Basic file reading
