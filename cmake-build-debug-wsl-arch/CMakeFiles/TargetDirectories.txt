@@ -1,3 +1,0 @@
-/mnt/g/Sync/NAS-Projects/IteractiveBinaryProcessing/cmake-build-debug-wsl-arch/CMakeFiles/ibp.dir
-/mnt/g/Sync/NAS-Projects/IteractiveBinaryProcessing/cmake-build-debug-wsl-arch/CMakeFiles/edit_cache.dir
-/mnt/g/Sync/NAS-Projects/IteractiveBinaryProcessing/cmake-build-debug-wsl-arch/CMakeFiles/rebuild_cache.dir
