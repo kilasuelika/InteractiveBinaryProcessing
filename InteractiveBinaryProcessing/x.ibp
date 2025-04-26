@@ -1,2 +1,5 @@
 x=3
 x
+
+ld x.bin
+r i32

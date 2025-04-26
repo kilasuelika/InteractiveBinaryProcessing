@@ -18,6 +18,10 @@ export namespace IBP {
     {
         FILE_HANDLE,
     };
+    enum class VarType
+    {
+        I32, I64, F32, F64,
+    };
 
     struct FileHandle
     {
@@ -36,7 +40,12 @@ export namespace IBP {
             return file_ptr->data();
         }
     };
-    using Symbol = std::variant<MemoryMapFileHandle, double>;
+    struct NumVar
+    {
+        VarType type;
+        double value;
+    };
+    using Symbol = std::variant<MemoryMapFileHandle, NumVar>;
     /*using ReadResult = std::variant<int32_t, int64_t, float, double, std::vector<int32_t>, std::vector<>>;*/
 
     struct ExecutionResult

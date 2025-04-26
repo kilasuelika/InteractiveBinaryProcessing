@@ -46,6 +46,16 @@ r i32*${3+2}(a)
 rv i32
 ```
 
+### Basic file writing
+
+```
+# open a file for writing, text mode, default append mode
+ldwr xx.txt
+
+# append data
+x=3 # x is i64
+w x 
+```
 
 ### Shell Commands
 

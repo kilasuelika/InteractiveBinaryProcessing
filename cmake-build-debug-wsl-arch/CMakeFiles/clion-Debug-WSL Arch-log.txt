@@ -1,0 +1,12 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G Ninja -S /mnt/g/Sync/NAS-Projects/IteractiveBinaryProcessing -B /mnt/g/Sync/NAS-Projects/IteractiveBinaryProcessing/cmake-build-debug-wsl-arch
+-- Configuring done (0.1s)
+CMake Error in CMakeLists.txt:
+  The "CXX_MODULE_STD" property on the target "ibp" requires that the
+  "__CMAKE::CXX23" target exist, but it was not provided by the toolchain.
+  Reason:
+
+    `libstdc++.modules.json` resource does not exist
+
+
+-- Generating done (0.1s)
+CMake Generate step failed.  Build files cannot be regenerated correctly.

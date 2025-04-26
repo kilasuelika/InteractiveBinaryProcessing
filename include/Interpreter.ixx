@@ -469,17 +469,8 @@ export namespace IBP
         }
         int64_t get_pos()
         {
-            auto pos = static_cast<int64_t>(*std::get_if<double>(&symbols_["POS"]));
+            auto pos = static_cast<int64_t>(std::get_if<NumVar>(&symbols_["POS"])->value);
             return pos;
-        }
-        double& get_pos_var()
-        {
-            auto pos = std::get_if<double>(&symbols_["POS"]);
-            /* if (!pos)
-             {
-                 throw std::runtime_error("POS not found");
-             }*/
-            return *pos;
         }
         void set_pos(const int64_t& new_pos)
         {
@@ -489,10 +480,12 @@ export namespace IBP
         }
 
         template<typename T>
-        void set_num_var(const std::string& name, const T& v)
+        void set_num_var(const std::string& name, const T& v, VarType t = VarType::F64)
         {
-            symbols_[name] = static_cast<double>(v);
-            evaluator_.add_variable(name, get_num_var(name));
+            if (!symbols_.contains(name)) {
+                symbols_[name] = NumVar{ t,static_cast<double>(v) };
+                evaluator_.add_variable(name, get_num_var(name));
+            }
         }
         template<typename T>
         T get_num(const std::string& name)
@@ -501,12 +494,12 @@ export namespace IBP
         }
         double& get_num_var(const std::string& name)
         {
-            auto pos = std::get_if<double>(&symbols_[name]);
+            auto pos = std::get_if<NumVar>(&symbols_[name]);
             if (!pos)
             {
                 throw std::runtime_error("POS not found");
             }
-            return *pos;
+            return pos->value;
         }
 
         int get_last_error()
@@ -545,7 +538,7 @@ export namespace IBP
             evaluator_.add_variable(SZ, get_num_var(SZ));
 
         }
-        std::unordered_map<std::string, Symbol> symbols_{ {"POS",0.0},{"SZ",0.0} ,{"ERR",0.0} };
+        std::unordered_map<std::string, Symbol> symbols_{ {"POS",NumVar{VarType::I64,0}},{"SZ",NumVar{VarType::I64, 0}} ,{"ERR", NumVar{VarType::I32,0}} };
         std::unordered_map < std::string, std::function<void(MemoryMapFileHandle* handle, int64_t& pos, int cnt, const std::string& varname)>> read_handlers_;
 
         std::regex byte_pattern_{ "^b\\d+$" };

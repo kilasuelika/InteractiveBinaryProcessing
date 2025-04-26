@@ -1,0 +1,19 @@
+# assignment
+x=3
+x1=3+5
+
+# statement
+x
+ri x
+
+# for loop
+for (;x<5;++x){
+    f(x,5)
+    z=f(5,x)
+}
+
+# function
+func f(x,y) {
+    return x+y
+}
+

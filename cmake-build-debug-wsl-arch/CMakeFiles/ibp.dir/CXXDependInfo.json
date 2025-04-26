@@ -1,0 +1,27 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "/mnt/g/Sync/NAS-Projects/IteractiveBinaryProcessing/cmake-build-debug-wsl-arch",
+	"dir-cur-src" : "/mnt/g/Sync/NAS-Projects/IteractiveBinaryProcessing",
+	"dir-top-bld" : "/mnt/g/Sync/NAS-Projects/IteractiveBinaryProcessing/cmake-build-debug-wsl-arch",
+	"dir-top-src" : "/mnt/g/Sync/NAS-Projects/IteractiveBinaryProcessing",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/mnt/g/Sync/NAS-Projects/IteractiveBinaryProcessing/cmake-build-debug-wsl-arch/CMakeFiles/ibp.dir",
+	"sources" : 
+	{
+		"CMakeFiles/ibp.dir/InteractiveBinaryProcessing/InteractiveBinaryProcessing.cpp.o" : 
+		{
+			"language" : "CXX",
+			"source" : "/mnt/g/Sync/NAS-Projects/IteractiveBinaryProcessing/InteractiveBinaryProcessing/InteractiveBinaryProcessing.cpp"
+		}
+	}
+}
